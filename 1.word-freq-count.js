@@ -15,3 +15,20 @@ Test case 2
 Input:  " Hello hello HELLO "
 Output: { hello: 3 }
  */
+
+function wordFrequency(sentence) {
+  let words = sentence.split(" ");
+  let wordCount = {};
+  for (let word of words) {
+    let wordLowerCase = word.toLowerCase();
+    if (wordCount.hasOwnProperty(wordLowerCase)) {
+      wordCount[wordLowerCase] += 1;
+    } else {
+      wordCount[wordLowerCase] = 1;
+    }
+    //console.log(wordCount);
+  }
+  return wordCount;
+}
+const output = wordFrequency("I love JS and I love coding and JS is fun FuN");
+console.log(output);
