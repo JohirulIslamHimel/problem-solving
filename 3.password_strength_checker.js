@@ -31,6 +31,9 @@ function checkPassword(password) {
   let hasNumber = false;
   let hasUpperCase = false;
   let hasSpace = password.includes(" ");
+  if (length < 8) {
+    reasons.push("Length must be at least 8");
+  }
   for (let i = 0; i < length; i++) {
     let character = password[i];
     // console.log(character);
