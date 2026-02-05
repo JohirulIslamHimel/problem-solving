@@ -53,7 +53,13 @@ function checkPassword(password) {
   }
   //console.log(hasSpace);
 
-  let isValid = reasons.length === 0;
+  //   let isValid = reasons.length === 0;
+  let isValid;
+  if (reasons.length === 0) {
+    isValid = true;
+  } else {
+    isValid = false;
+  }
 
   return {
     valid: isValid,
