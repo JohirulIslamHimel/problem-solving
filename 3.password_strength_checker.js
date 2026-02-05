@@ -32,7 +32,7 @@ function checkPassword(password) {
   let hasUpperCase = false;
   let hasSpace = password.includes(" ");
   if (length < 8) {
-    reasons.push("Length must be at least 8");
+    reasons.push("length must be at least 8");
   }
   for (let i = 0; i < length; i++) {
     let character = password[i];
@@ -46,13 +46,13 @@ function checkPassword(password) {
   }
   //console.log(password, length, hasUpperCase, hasNumber);
   if (hasNumber === false) {
-    reasons.push("Missing number");
+    reasons.push("missing number");
   }
   if (hasUpperCase === false) {
-    reasons.push("Missing uppercase letter");
+    reasons.push("missing uppercase letter");
   }
   if (hasSpace === true) {
-    reasons.push("Space found!!!");
+    reasons.push("contains spaces");
   }
   //console.log(hasSpace);
 
